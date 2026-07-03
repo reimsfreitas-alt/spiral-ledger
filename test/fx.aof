@@ -1,0 +1,2 @@
+{"seq":1,"ts":1783112981944,"prev_hash":"0000000000000000000000000000000000000000000000000000000000000000","hash":"60d082e5c2ddf62c10d2a444352b54d7d8dbc04c7a54aac114469a1e14fb3f2e","payload":{"decision_id":"D1","state":"DECIDIDA","actor":"a@b","why":"teste"}}
+{"seq":2,"ts":1783112981952,"prev_hash":"60d082e5c2ddf62c10d2a444352b54d7d8dbc04c7a54aac114469a1e14fb3f2e","hash":"ad9075c4f36d9008702b1c5d7bef8376deec53069ad9728f3a9d9d8e4d234995","payload":{"decision_id":"D1","state":"EXECUTADA"}}
