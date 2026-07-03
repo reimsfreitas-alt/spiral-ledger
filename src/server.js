@@ -16,7 +16,10 @@ const Ledger = require("./ledger");
 const { verify: verifySig, loadPublicKey } = require("./signing");
 
 const PORT = process.env.PORT || 4700;
-const HOST = process.env.HOST || "127.0.0.1"; // seguro por padrão: só local
+// Em nuvem (Render/Railway definem PORT) o bind DEVE ser 0.0.0.0, senão a plataforma
+// não detecta a porta. Detecção automática — não depende de env HOST chegar ao runtime.
+const IS_CLOUD = !!(process.env.RENDER || process.env.PORT);
+const HOST = process.env.HOST || (IS_CLOUD ? "0.0.0.0" : "127.0.0.1");
 const VERSION = require("../package.json").version;
 const TOKEN = process.env.LEDGER_TOKEN || null;
 const FILE = process.env.LEDGER_PATH || path.join(process.cwd(), "data", "ledger.aof");
